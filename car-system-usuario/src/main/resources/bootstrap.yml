@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: car-system-usuario  # Nombre del microservicio
+  config:
+    import:configserver:  # Importar configuración desde el Config Server
+  cloud:
+    config:
+      uri: http://localhost:8888  # URL del Config Server
+      fail-fast: true  # Falla rápido si no puede conectarse
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
